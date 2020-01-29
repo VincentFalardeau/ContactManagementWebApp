@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8" />
+      <title>Travail pratique 1</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <script src="./js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+      <link rel="stylesheet" href="./js/jquery-ui-1.12.1.custom/jquery-ui.css">
+</head>
+<body>
+      <i class="fa fa-user" style="font-size: 50px; display: inline"></i>
+      <h2 style="display: inline">Gestionnaire de contact</h2>
+      <div id="Wrapper" class="wrapper">
+            <div class="grid-container grid-header">
+                  <div>Nom</div>
+                  <div>Téléphone</div>
+                  <div>Courriel</div>
+                  <div class="margin-wrapper">
+                        <button id="InsertShowButton" title="Ajouter un contact">
+                              <i class="fa fa-plus" aria-hidden="true"></i>
+                        </button>
+                  </div>
+            </div>
+            <form action="javascript:void(0);" id="Form-Insert">
+                  <div id="Tableau-Controls" style="display: none" class="grid-container grid-control">
+                        <div>
+                              <input type="text" name="nom" id="InsertName" placeholder="Nom"></input>
+                        </div>
+                        <div>
+                              <input type="phone" name="telephone" id="InsertTelephone" placeholder="Téléphone"></input>
+                        </div>
+                        <div>
+                              <input type="email" name="courriel" id="InsertEmail" placeholder="Courriel"></input>
+                        </div>
+                        <div>
+                              <button id="ControlAcceptButton" type="submit">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                              </button>
+                              <button id="ControlRefreshButton">                      
+                                    <i class="fa fa-refresh" aria-hidden="true"></i>
+                              </button>
+                              <button id="ControlCancelButton">                      
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                              </button>
+                        </div>
+                  </div>
+            </form>
+            <div class="hidden-wrapper">
+                  <div id="DataGrid"> 
+                  </div>      
+            </div>
+            
+      </div>     
+      
+      <div id="Overlay" class="overlay"></div>
+      
+      <div id="Popup" class="popup">
+            <h2>Attention</h2>
+            Effacer <span id="ContactName"></span>
+            <br>
+            <button id="DeleteAcceptButton">Confirmer</button>
+            <button id="DeleteDenyButton">Annuler</button>
+      </div> 
+
+      <script src="./js/Validation.js"></script>
+      <script src="./js/script2.js"></script>
+</body>
+</html>
